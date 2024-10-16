@@ -1,0 +1,9 @@
+#ENV variables can  be accessed in image build time and container run time
+#ARG is only accessed at the time of image creation
+
+ARG version
+FROM almalinux:${version:-9}
+ARG course="devops with AWS"
+
+RUN echo Course: ${course}
+CMD [ "sleep", "100" ]
