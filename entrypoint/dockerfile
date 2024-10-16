@@ -1,4 +1,8 @@
-##
-
+##it cannot be overridden at run time like CMD
+##it will append to the entrypoint command
+##for better results we can use both cmd and entrypoint
+##cmd can provide arguments to entry point
 FROM almalinux:9
-CMD [ "ping", "google.com;" ]
+# CMD [ "ping", "google.com;" ]
+CMD [ "google.com" ]
+ENTRYPOINT [ "ping" ]

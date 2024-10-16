@@ -1,5 +1,6 @@
 ##CMD will only run at the time of using docker run command
 ##RUN will only run at the time of using docker build command
+##CMD will be overridden at run time > command line arguments
 FROM almalinux:9
 
 RUN dnf install nginx -y
