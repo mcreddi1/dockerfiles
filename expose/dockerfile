@@ -1,0 +1,6 @@
+##let the users know what are the ports this container will opne when it runs, expose instruction will not open any ports it will only give information
+
+FROM almalinux:9
+RUN dnf install nginx -y
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

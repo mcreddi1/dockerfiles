@@ -1,3 +1,5 @@
+##it adds metadata to the image, description, who is the owner, which project. labels are used to filter the images
+
 FROM almalinux:9
 
 LABEL author="Chinna" \
