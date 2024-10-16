@@ -1,0 +1,70 @@
+# Let's create a text file with all the docker commands and usage examples.
+docker_commands = """
+1. Docker Version and Information:
+   docker --version        # Show Docker version
+   docker info             # Display system-wide information about Docker
+
+2. Docker Images:
+   docker images           # List all available images
+   docker pull <IMAGE_NAME> # Download an image
+   docker rmi <IMAGE_NAME>  # Remove a Docker image
+   docker image ls          # List all images (same as 'docker images')
+   docker image prune       # Remove unused images
+   docker image inspect <IMAGE_NAME> # Show detailed information about an image
+
+3. Docker Containers:
+   docker ps               # List all running containers
+   docker ps -a            # List all containers (including stopped ones)
+   docker run <IMAGE_NAME>  # Run a container
+   docker run -it <IMAGE_NAME>  # Run interactively
+   docker run -d <IMAGE_NAME>   # Run container in the background
+   docker exec -it <CONTAINER_ID> bash  # Access shell of a running container
+   docker start <CONTAINER_ID> # Start a stopped container
+   docker stop <CONTAINER_ID>  # Stop a running container
+   docker restart <CONTAINER_ID>  # Restart container
+   docker kill <CONTAINER_ID>  # Kill a running container
+   docker rm <CONTAINER_ID>    # Remove a stopped container
+   docker logs <CONTAINER_ID>  # View container logs
+   docker inspect <CONTAINER_ID>  # Show container information
+   docker stats             # Show resource usage statistics
+
+4. Docker Volumes:
+   docker volume ls         # List all Docker volumes
+   docker volume create <VOLUME_NAME>  # Create a volume
+   docker volume inspect <VOLUME_NAME> # Show volume information
+   docker volume rm <VOLUME_NAME>      # Remove a volume
+
+5. Docker Networks:
+   docker network ls        # List all Docker networks
+   docker network create <NETWORK_NAME>  # Create a network
+   docker network inspect <NETWORK_NAME> # Show network details
+   docker network rm <NETWORK_NAME>      # Remove a network
+
+6. Docker Compose:
+   docker-compose up        # Start all services
+   docker-compose up -d     # Start services in the background
+   docker-compose down      # Stop and remove services
+   docker-compose ps        # List services managed by docker-compose
+   docker-compose logs      # Show logs of all services
+
+7. Docker Clean Up:
+   docker system prune      # Clean up unused resources
+   docker system df         # Show disk usage of Docker resources
+
+8. Docker Build and Image Management:
+   docker build -t <IMAGE_NAME> .  # Build an image from a Dockerfile
+   docker tag <IMAGE_NAME> <NEW_IMAGE_NAME>  # Tag an image
+   docker push <IMAGE_NAME>    # Push an image to a registry
+   docker pull <IMAGE_NAME>    # Pull an image from a registry
+
+9. Docker Save and Load:
+   docker save -o <OUTPUT_FILE> <IMAGE_NAME>  # Save image to a tar file
+   docker load -i <INPUT_FILE>   # Load an image from a tar file
+"""
+
+# Saving the commands into a text file
+file_path = '/mnt/data/docker_commands.txt'
+with open(file_path, 'w') as file:
+    file.write(docker_commands)
+
+file_path
