@@ -1,3 +1,5 @@
+##CMD will only run at the time of using docker run command
+##RUN will only run at the time of using docker build command
 FROM almalinux:9
 
 RUN dnf install nginx -y
